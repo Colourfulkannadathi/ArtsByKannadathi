@@ -302,6 +302,60 @@ header {
   font-weight: bold;
 }
 
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.static-tile {
+  text-align: center;
+}
+
+.static-tile img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.static-tile figcaption {
+  margin-top: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.static-tile {
+  overflow: hidden;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+.static-tile img {
+  width: 100%;
+  height: 250px; /* Fixed height for uniform tiles */
+  object-fit: cover; /* Makes the image fill the area without stretching */
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+
+.static-tile figcaption {
+  text-align: center;
+  padding: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+
 /* Animation keyframes for auto flip */
 @keyframes flipAnimation {
   0%, 45% {
@@ -311,5 +365,3 @@ header {
     transform: rotateY(180deg);
   }
 }
-
-
